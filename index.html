@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/rollDice.js" defer></script>
+    <script src="js/diceLock.js" defer></script>
+    <script src="js/updatePoints.js" defer></script>
+    <script src="js/calculatePoints.js" defer></script>
+    <script src="js/chooseField.js" defer></script>
+</head>
+<body>
+    <header>
+        <dice-section>
+            <div class="dice" id="0" ><img src="" alt=""></div>
+            <div class="dice" id="1"><img src="" alt=""></div>
+            <div class="dice" id="2"><img src="" alt=""></div>
+            <div class="dice" id="3"><img src="" alt=""></div>
+            <div class="dice" id="4"><img src="" alt=""></div>
+        </dice-section>
+        <div class="buttonSection">
+            <div class="turnCounter">
+                <h4>Turn:</h4>
+                <h5 id="turnCounter">0</h5>
+            </div>
+            
+            <button>Roll</button>
+        </div>
+    </header>
+
+    <scoring-section>
+        <div class="scoreArea">
+            <p>1-s</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>2-s</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>3-s</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>4-s</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>5-s</p>
+            <div class="valueBox"></div>
+        </div>
+        <div style="display: flex;">
+            <div class="scoreArea">
+                <p>6-s</p>
+                <div class="valueBox"></div>
+            </div>
+            <div class="subTotals">
+                Sum:
+                <div id="upperSectionTotal">N/A</div>
+                Bonus:
+                <div id="upperSectionBonus">N/A</div>
+            </div>
+        </div>
+        
+
+
+        <div class="scoreArea">
+            <p>One pair</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>Two pairs</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>Three same</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>Four same</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>Full house</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>Small Straight</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>Large Straight</p>
+            <div class="valueBox"></div>
+        </div>
+        <div class="scoreArea">
+            <p>Chance</p>
+            <div class="valueBox"></div>
+        </div>
+
+        <div style="display: flex;">
+            <div class="scoreArea">
+                <p>Yatzy</p>
+                <div class="valueBox"></div>
+            </div>
+            <div class="total">
+                Total:
+                <div id="total">N/A</div>
+            </div>
+        </div>
+        
+
+    </scoring-section>
+</body>
+</html>

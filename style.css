@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 600px;
+    margin: auto;
+    border: solid 1.2px black;
+}
+
+dice-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;           
+    border: 1px solid black;
+    height: 100px; 
+}
+
+.dice{
+    width: 60px;
+    height: 60px;
+    border: solid 1.2px black;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.isLocked{
+    opacity: 50%;
+}
+
+.dice img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* keeps aspect ratio, no cropping */
+}
+
+.buttonSection{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-bottom: 1px solid black;
+}
+
+button{
+    width: 100px;
+    border-radius: 10px;
+}
+
+.scoreArea{
+    display: flex;
+    padding: 5px;
+    padding-left: 20px;
+    align-items: center; 
+}
+
+.pointsLocked{
+    opacity: 50%;
+}
+
+.valueBox{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.scoreArea p{
+    width: 100px;
+}
+
+.subTotals div{
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.subTotals{
+    display: flex;
+    gap: 25px;
+    margin-left: 50px;
+}
+
+.total div{
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.total{
+    display: flex;
+    gap: 25px;
+    margin-left: 100px;
+}
