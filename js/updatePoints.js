@@ -11,8 +11,6 @@ function updatePoints(){
 }
 
 function pointsUpperSection(){
-    let sumUpperSection = 0;
-
     for (let index = 1; index <= 6; index++) {
         let currentValueBox = valueBox[index-1]
         if(!currentValueBox.classList.contains("pointsLocked")){
@@ -30,6 +28,7 @@ function pointsLowerSection(){
         }
     }
 }
+
 
 function pointTotalUpper(){
     let sumUpperSection = 0;

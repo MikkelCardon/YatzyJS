@@ -16,6 +16,7 @@ function rollDice(){
         if(!die.classList.contains("isLocked")){
             let newValue = Math.floor((Math.random()*6)+1)
             die.dataset.dieValue = newValue
+            die.classList.remove("diceBorder")
             die.innerHTML = `<img src="images/${newValue}face.jpg" alt=""></img>"`
         }
     }

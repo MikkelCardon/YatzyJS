@@ -6,7 +6,7 @@ for (const area of valueBox) {
             area.classList.add("pointsLocked")
             resetRound()
         }else{
-            alert("still have turns left")
+            alert("you still have turns left")
         }
     })
 }
@@ -18,6 +18,7 @@ function resetRound(){
     turnCounter.textContent = "0"
 
     for (const die of dice) {
+        die.classList.add("diceBorder")
         die.classList.remove("isLocked")
         die.innerHTML = ""
     }
