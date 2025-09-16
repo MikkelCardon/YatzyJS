@@ -48,15 +48,35 @@ function pointTotalUpper(){
 }
 
 function pointsTotal(){
-    let sumLowerSection
+    let sumLowerSection = 0
+    let lockedBoxes = 0;
 
     for (const valueBox of lowerSectionValueBox) {
         if(valueBox.classList.contains("pointsLocked")){
             sumLowerSection += parseInt(valueBox.textContent)
+            lockedBoxes++
         }
     }
     let sumUpper = document.getElementById("upperSectionTotal")
     let bonus = document.getElementById("upperSectionBonus")
 
-    document.getElementById("total").textContent = sumLowerSection + parseInt(sumUpper.textContent) + parseInt(bonus)
+    document.getElementById("total").textContent = sumLowerSection + parseInt(sumUpper.textContent) + parseInt(bonus.textContent)
+
+    isGameDone()
 }
+
+function isGameDone(){
+    let lockedBoxes = 0
+
+    for (const element of valueBox) {
+        if(element.classList.contains("pointsLocked")){
+            lockedBoxes++
+        }
+    }
+
+    if(lockedBoxes == valueBox.length){
+        alert("YAAA you are done - Total points:" + document.getElementById("total").textContent)
+    }
+}
+    
+    
