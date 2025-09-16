@@ -49,7 +49,18 @@ function fourSame(){
 
 function fullHouse(){
     let threeSame = pairFinder(3)
-    let pair = pairFinder(2, Math.floor(threeSame / 3)-1)
+    if(threeSame === 0) return 0
+
+    let diceNumber = threeSame / 3
+    let pair = 0;
+
+    let occurences = (diceValues, numberToFind) => diceValues.filter(diceValue => diceValue === numberToFind).length
+    for (let index = 1; index <= 6; index++) {
+        if(index == diceNumber) continue
+        if(occurences(diceValues, index) == 2){
+            pair = index *2
+        }
+    }
 
     return threeSame > 0 && pair > 0 ? threeSame+pair : 0; 
 }
